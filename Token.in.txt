@@ -1,0 +1,56 @@
+
+
+
+<digit> ::= 0|<unsigned digit>
+<unsigned digit>::= 1|2|3|4|5|6|7|8|9
+
+<digits>::= <digit>|<digit><digits>
+
+
+
+<keyword> ::= abstract | boolean | break | byte | case | catch | char | class 
+| const | continue | default | do | double | else | extends | final | finally 
+| float | for | goto | if | implements | import | instanceof | int | interface | long 
+| native | new | package | private | protected | public | return | short | static | super | switch 
+| synchronized | this | throw | throws | transient | try | void | volatile | while
+
+
+<sign> ::= + | –
+
+<integer literal> ::= <sign>?<digits>
+<sign> ::= + | –
+
+<character literal> ::= <letter> | <symbol> | '<digit>'
+<boolean literal> ::= true | false
+
+<string literal> ::= <character>|<character><string>
+
+<assignment operator> ::= = | *= | /= | %= | += | -= | <<= | >>= | >>>= | &= | ^= | |=
+
+<literal> ::= <integer literal> |
+ <boolean literal> | <character literal> |
+ <string literal> | 
+
+
+<type> ::= <primitive type> | <array type>
+<array type> ::= <type> [ ]
+<primitive type> ::= <numeric type> | boolean
+<numeric type> ::= <integral type> | <floating-point type>
+<integral type> ::= byte | short | int | long | char
+<floating-point type> ::= float | double
+
+
+<variable declarators> ::= <variable declarator> | <variable declarators> , <variable declarator>
+
+<variable declarator> ::= <variable declarator id> | <variable declarator id> = <variable initializer>
+
+<variable declarator id> ::= <identifier> | <variable declarator id> [ ]
+
+<variable initializer> ::= <expression> | <array initializer>
+<array initializer> ::= { <variable initializers>? , ? }
+
+<variable initializers> ::= <variable initializer> | <variable initializers> , <variable initializer>
+
+<variable initializer> ::= <expression> | <array initializer>
+
+

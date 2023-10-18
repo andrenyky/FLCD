@@ -1,0 +1,50 @@
+<letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | 
+"N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" 
+| "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" 
+| "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+
+<underline> := "_"
+
+<digit> ::= 0|<unsigned digit>
+<unsigned digit>::= 1|2|3|4|5|6|7|8|9
+
+<digits>::= <digit>|<digit><digits>
+
+<alphabet> ::= <underscore> | <letter> | <digits>| <symbol>
+
+
+
+
+
+
+<operators> ::= +| - | * | / | : | = | <= | < | >= | > | += | -= | /=| *=
+
+<symbol> ::= <symbol>         ::= "|" | " " | "!" | "#" | "$" | "%" | "&" | "(" | ")" | "*" |
+ "+" | "," | "-" | "." | "/" | ":" | ";" | ">" | "=" | "<" | "?" | "@" | "[" | "\" | "]" |
+ "^" | "_" | "`" | "{" | "}" | "~"
+
+<separators> ::= "[" | "]" | "{" | "}" | ":" | ";" | space
+
+<keyword> ::= abstract | boolean | break | byte | case | catch | char | class 
+| const | continue | default | do | double | else | extends | final | finally 
+| float | for | goto | if | implements | import | instanceof | int | interface | long 
+| native | new | package | private | protected | public | return | short | static | super | switch 
+| synchronized | this | throw | throws | transient | try | void | volatile | while
+
+
+
+
+
+<identifier> ::= <initial>|<initial><more>
+<initial> ::= $|_|<letter>
+<more>::=<final>|<more><final>
+<final>::=<initial>|<digit>
+
+
+<signed integer> ::= <sign>?<digits>
+<sign> ::= + | –
+
+<character> ::= <letter> | <symbol> | '<digit>'
+
+<string> ::= <character>|<character><string>
+

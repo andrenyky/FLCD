@@ -1,0 +1,45 @@
+
+
+
+<block> ::= { <block statements>? }
+<block statements> ::= <block statement> | <block statements> <block statement>
+
+<block statement> ::= <local variable declaration statement> | <statement>
+
+<local variable declaration statement> ::= <local variable declaration> ;
+
+<local variable declaration> ::= <type> <variable declarators>
+
+
+<if-statement>	::=if <expression> then <statement> | if <expression> then <statement> else <statement>
+
+
+<statement>::= <assignment> | <if-statement> | <while-loop> | <for-loop> | ...
+
+<while-loop>:== while <expression> <block>
+<for-loop>:== for <expression> <block>
+
+<expression> ::= <assignment expression>
+
+<assignment expression> ::= <conditional expression> | <assignment>
+
+<assignment> ::= <left hand side> <assignment operator> <assignment expression>
+
+<left hand side> ::= <expression name> | <field access> | <array access>
+<primary> ::= <primary no new array> | <array creation expression>
+<array access> ::= <expression name> [ <expression> ] | <primary no new array> [ <expression>]
+<field access> ::= <primary> . <identifier> | super . <identifier>
+<primary no new array> ::= <literal> | this | ( <expression> ) | <class instance creation expression> | <field access> | 
+<class instance creation expression> ::= new <class type> ( <argument list>? )
+<argument list> ::= <expression> | <argument list> , <expression>
+<class type> ::= <type name>
+<package name> ::= <identifier> | <package name> . <identifier>
+<type name> ::= <identifier> | <package name> . <identifier>
+<method invocation> | <array access>
+<method invocation> ::= <method name> ( <argument list>? ) | <primary> . <identifier> ( <argument list>? ) | super . <identifier> ( <argument list>? )
+
+
+<expression name> ::= <identifier> | <ambiguous name> . <identifier>
+<ambiguous name>::= <identifier> | <ambiguous name>. <identifier>
+
+
