@@ -1,0 +1,16 @@
+Integer N;
+Integer[] array = new Integer[N];
+Integer i;
+Integer ~; //perror
+Integer sum;
+Scan N;
+
+for(i=0;i<N;i++) {
+Scan(array[i]);
+}
+
+for(i=0;i<N;i++) {
+sum+=array[i];
+}
+
+System.out.print("The sum is: "+sum);

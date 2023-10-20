@@ -1,0 +1,25 @@
+
+Integer n1;
+Integer i;
+Scan(n1);
+
+if(n1 < 2)
+{
+System.out.print("Not prime");
+}
+if(n1 == 2) {
+System.out.print("Prime");
+}
+for(i = 3; i<=n1/2;i++)
+if(n1 % i == 0)
+{ System.out.print("Not prime");
+  break;
+}
+System.out.print("Prime");
+
+
+
+
+
+
+#

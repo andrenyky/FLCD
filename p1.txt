@@ -1,0 +1,25 @@
+#
+
+Integer n1;
+Integer n2;
+Integer n3;
+Integer maxi;
+
+Scan(n1);
+Scan(n2);
+Scan(n3);
+
+if(n1>=n2 && n2>=n3)
+{
+maxi = n1;
+}
+if(n2>=n1 && n2>=n3)
+{
+maxi = n2;
+}
+if(n3 >=n1 && n3>=n2)
+{
+maxi = n3;
+}
+
+#
